@@ -5,18 +5,23 @@ using System.Text;
 
 namespace TypingGame {
   public class PracticeText {
-    private static readonly string AbsolutePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\" + TextDirectory;
+    private static string AbsolutePath;
 
-    public static string TextDirectory { get; set; } = "Text";
+    public static string TextDirectory;
+
+    static PracticeText() {
+      TextDirectory = "Text";
+      AbsolutePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\" + TextDirectory;
+    }
 
     public static string[] GetAllText() {
       return Directory.GetFiles(AbsolutePath);
     }
 
-    public static string GetText(string name) {
-      
-    }
-    
+    //public static string GetText(string name) {
+
+    //}
+
     public static string GetRandText() {
       string[] files = GetAllText();
       return files[GetRand(files.Length)];
@@ -39,7 +44,7 @@ namespace TypingGame {
       return new Random().Next(max);
     }
 
-    private static string ReadFile(string name) {
+    public static string ReadFile(string name) {
       using (var sr = new StreamReader(name, Encoding.UTF8)) {
         return sr.ReadToEnd();
       }

@@ -34,11 +34,13 @@
       // 
       // menuStrip1
       // 
+      this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
       this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FormatToolStripMenuItem});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new System.Drawing.Size(825, 24);
+      this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
+      this.menuStrip1.Size = new System.Drawing.Size(1375, 35);
       this.menuStrip1.TabIndex = 2;
       this.menuStrip1.Text = "menuStrip1";
       // 
@@ -47,13 +49,13 @@
       this.FormatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FontToolStripMenuItem});
       this.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem";
-      this.FormatToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+      this.FormatToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
       this.FormatToolStripMenuItem.Text = "Format";
       // 
       // FontToolStripMenuItem
       // 
       this.FontToolStripMenuItem.Name = "FontToolStripMenuItem";
-      this.FontToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+      this.FontToolStripMenuItem.Size = new System.Drawing.Size(132, 30);
       this.FontToolStripMenuItem.Text = "Font";
       this.FontToolStripMenuItem.Click += new System.EventHandler(this.FontStripMenuItem_Click);
       // 
@@ -63,39 +65,38 @@
       // 
       // writeTb
       // 
-      this.writeTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.writeTb.Location = new System.Drawing.Point(0, 333);
+      this.writeTb.Location = new System.Drawing.Point(0, 483);
+      this.writeTb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
       this.writeTb.Multiline = true;
       this.writeTb.Name = "writeTb";
       this.writeTb.ShortcutsEnabled = false;
-      this.writeTb.Size = new System.Drawing.Size(825, 300);
+      this.writeTb.Size = new System.Drawing.Size(1375, 460);
       this.writeTb.TabIndex = 3;
       // 
       // viewTb
       // 
-      this.viewTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
       this.viewTb.Enabled = false;
-      this.viewTb.Location = new System.Drawing.Point(0, 27);
+      this.viewTb.Location = new System.Drawing.Point(0, 35);
+      this.viewTb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
       this.viewTb.Multiline = true;
       this.viewTb.Name = "viewTb";
       this.viewTb.ShortcutsEnabled = false;
-      this.viewTb.Size = new System.Drawing.Size(825, 300);
+      this.viewTb.Size = new System.Drawing.Size(1375, 460);
       this.viewTb.TabIndex = 4;
       // 
       // Form1
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(825, 637);
+      this.ClientSize = new System.Drawing.Size(1375, 956);
       this.Controls.Add(this.viewTb);
       this.Controls.Add(this.writeTb);
       this.Controls.Add(this.menuStrip1);
       this.MainMenuStrip = this.menuStrip1;
+      this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
       this.Name = "Form1";
-      this.Text = "Form1";
       this.Load += new System.EventHandler(this.Form1_Load);
+      this.Resize += new System.EventHandler(this.Form1_Resize);
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
       this.ResumeLayout(false);
@@ -110,6 +111,6 @@
     private System.Windows.Forms.FontDialog fontDialog1;
     private System.Windows.Forms.TextBox writeTb;
     private System.Windows.Forms.TextBox viewTb;
-  }
+    }
 }
 
